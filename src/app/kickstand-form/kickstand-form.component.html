@@ -1,0 +1,6 @@
+<ks-form #ksform (submitted)="handleSubmit($event)">
+  <ks-form-field label="Name" required></ks-form-field>
+  <ks-form-field label="Email" type="email" value="bad.email"></ks-form-field>
+  <input type="text" value="something" name="nativInput"/>
+  <ks-button type="submit">Submit Me</ks-button>
+</ks-form>

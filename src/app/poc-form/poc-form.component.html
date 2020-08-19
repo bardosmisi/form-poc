@@ -1,0 +1,36 @@
+<hr/>
+<h2>Simple native form:</h2>
+<form class="fluid-theme--surface" (submit)="handleSubmit($event)" (formdata)="handleFromData($event)" >
+  <fluid-checkbox
+  [disabled]="false"
+  [checked]="_isChecked()"
+  [indeterminate]="_isIndeterminate()"
+  value="checkbox"
+  name="checkbox"
+  >
+    I am the label
+  </fluid-checkbox>
+  <input name="name" type="text" value="something" />
+  <button type="submit">submit</button>
+</form>
+
+<hr/>
+
+<h2>Webcomponent form:</h2>
+<webcomponent-form>
+  <fluid-checkbox
+  [disabled]="false"
+  [checked]="_isChecked()"
+  [indeterminate]="_isIndeterminate()"
+  value="checkbox"
+  name="checkbox"
+  >
+    I am the label
+  </fluid-checkbox>
+  <input name="name" type="text" value="something" />
+  <!-- The submit button is implemented in the webcomponent-form
+      in a future, real implementation we could also add logic to check if the slot
+      contains a submit element, but for a POC it should be fine for now -->
+  <!-- <button type="submit">submit</button> -->
+</webcomponent-form>
+<hr/>
